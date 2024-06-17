@@ -5,15 +5,15 @@ from random import choice
 import statistics 
 
 sudoku_str = """
-                    024007000
-                    600000000
-                    003680415
-                    431005000
-                    500000032
-                    790000060
-                    209710800
-                    040093000
-                    310004750
+........1
+.8.......
+.3..8..4.
+....547..
+1...9835.
+69.......
+7..4....6
+.........
+.54.3.9.8
 """
 
 def convert_to_startingSudoku_format(sudoku_str):
@@ -30,19 +30,7 @@ def convert_to_startingSudoku_format(sudoku_str):
     return startingSudoku.strip()
 
 startingSudoku = convert_to_startingSudoku_format(sudoku_str)
-#print(startingSudoku)
 
-#startingSudoku = """
-#                    024007000
-#                    600000000
-#                    003680415
-#                    431005000
-#                    500000032
-#                    790000060
-#                    209710800
-#                    040093000
-#                    310004750
-#                """
 
 sudoku = np.array([[int(i) for i in line] for line in startingSudoku.split()])
 
